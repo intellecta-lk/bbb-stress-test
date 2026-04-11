@@ -1,4 +1,4 @@
-FROM node:10-slim as core
+FROM node:20-slim AS core
 
 # Install latest chrome dev package and fonts to support major charsets (Chinese, Japanese, Arabic, Hebrew, Thai and a few others)
 # Note: this installs the necessary libs to make the bundled version of Chromium that Puppeteer
@@ -32,12 +32,12 @@ CMD ["google-chrome-unstable"]
 
 # ---- Development image ----
 
-FROM core as development
+FROM core AS development
 
 CMD ["/bin/bash"]
 
 # ---- Image to publish ----
-FROM core as dist
+FROM core AS dist
 
 # Switch back to the root user to install dependencies
 USER root:root
