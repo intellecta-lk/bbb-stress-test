@@ -25,7 +25,7 @@
   "dependencies": {
     "bigbluebutton-js": "0.0.7",
     "lodash": "4.17.15",
-    "puppeteer": "4.0.0",
+    "puppeteer": "^24.40.0",
     "winston": "3.2.1",
     "yargs": "15.3.1"
   },
